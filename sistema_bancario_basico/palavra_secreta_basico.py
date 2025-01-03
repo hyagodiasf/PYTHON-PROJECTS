@@ -1,6 +1,7 @@
-secret_word = 'amor'
+secret_word = 'perfume'
 aux_secret_word = list(secret_word.replace(secret_word[:],"*"*(len(secret_word))))
 # aux_secret_word = ["*"] * len(secret_word)
+count = 0
 print(f"""
 BEM-VINDO AO JOGO
 ACERTE A PALAVRA SECRETA
@@ -14,7 +15,7 @@ while "*" in (aux_secret_word):
     if(len(typed_word) != 1 or typed_word.isdigit()):
       print('Você informou um número ou mais de uma letra.')
       continue
-    if(typed_word in secret_word):
+    elif(typed_word in secret_word):
       for inx, char in enumerate(secret_word):
         if(char == typed_word):
           aux_secret_word[inx] = typed_word
@@ -23,4 +24,7 @@ while "*" in (aux_secret_word):
       print(f'A letra "{typed_word}" não está na palavra secreta.')   
   except:
        pass
-print("Parabéns! Você acertou a palavra: " + secret_word)
+  count +=1
+print("PARABÉNS! VOCÊ GANHOU: " + secret_word)
+print(f'Tentativas: {count}')
+
