@@ -1,3 +1,4 @@
+import os, time as t
 secret_word = 'perfume'
 aux_secret_word = list(secret_word.replace(secret_word[:],"*"*(len(secret_word))))
 # aux_secret_word = ["*"] * len(secret_word)
@@ -27,4 +28,5 @@ while "*" in (aux_secret_word):
   count +=1
 print("PARABÉNS! VOCÊ GANHOU: " + secret_word)
 print(f'Tentativas: {count}')
-
+t.sleep(5)
+os.system('cls')
