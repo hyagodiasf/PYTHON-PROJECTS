@@ -62,4 +62,7 @@ elif(resto_divisao_2 <= 9):
     numeros.append(resto_divisao_2)
 
 cpf_formatado = formatar_cpf_lista(numeros)
-print("CPF válido: ",cpf_formatado)
+if(cpf_formatado == dado_cpf):
+    print("CPF válido: ",cpf_formatado)
+else:
+    print("CPF inválido!")
