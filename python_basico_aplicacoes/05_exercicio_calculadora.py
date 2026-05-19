@@ -5,6 +5,7 @@ while True:
         print('ATENÇÃO! Digite apenas [i] ou [s].')
         continue
 
+    # opção 's'
     if opc == 's':
         print("Saindo do programa...")
         break

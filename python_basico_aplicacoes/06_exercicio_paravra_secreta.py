@@ -36,7 +36,7 @@ while "*" in (hidden_word):
                     hidden_word [inx] = typed_letter
             print(f"Acertou! A palavra é: " + "".join(hidden_word ))
         else:
-            print(f'A letra "{typed_word}" não está na palavra secreta.')
+            print(f'A letra "{typed_letter}" não está na palavra secreta.')
    
     except Exception as e:
         print(f"Erro: {e}")
